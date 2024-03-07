@@ -1,11 +1,29 @@
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Sidebar from './components/Sidebar';
+import Navbar from './components/Navbar';
+import Dashboard from './pages/Dashboard'; 
+import Orders from './pages/Orders'; 
+import SidebarItem from './components/SidebarItem';
+import { Home as HomeIcon, ShoppingCart as OrdersIcon } from 'lucide-react';
 
-
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-500">Hello world!</h1>
-    </div>
+    <Router>
+      <main className="flex">
+      <Sidebar>
+          <SidebarItem icon={<HomeIcon />} text="Dashboard" to="/" />
+          <SidebarItem icon={<OrdersIcon />} text="Orders" to="/orders" />
+        </Sidebar>
+        <div className="flex-1">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Dashboard />} />
+            <Route path="/orders" element={<Orders />} />
+          </Routes>
+        </div>
+      </main>
+    </Router>
   );
-};
+}
 
 export default App;
