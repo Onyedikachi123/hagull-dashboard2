@@ -1,0 +1,18 @@
+[
+    {
+      "title": "Total Earnings",
+      "amount": "$859.25k",
+      "icon": "CircleDollarSign"
+    },
+    {
+      "title": "Orders Completed",
+      "amount": "66,894",
+      "icon": "ShoppingCart"
+    },
+    {
+      "title": "Customers",
+      "amount": "500",
+      "icon": "Users"
+    }
+  ]
+  

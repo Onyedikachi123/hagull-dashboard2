@@ -1,8 +1,10 @@
+/* eslint-disable react/prop-types */
 import { useState, createContext } from "react";
 import { MoreVertical, ChevronFirst, ChevronLast } from "lucide-react";
 import logo from "../assets/logo.png";
 
 export const SidebarContext = createContext();
+
 
 const Sidebar = ({ children }) => {
   const [expanded, setExpanded] = useState(true);
@@ -30,7 +32,7 @@ const Sidebar = ({ children }) => {
         </SidebarContext.Provider>
         <div className="border-t flex p-3">
           <img
-            src="https://ui-avatars.com/api/?background=c7d2fe&color=3730a3&bold=true"
+            src="https://ui-avatars.com/api/?background=eaf8ff&color=1b97b2&bold=true"
             alt=""
             className="w-10 h-10 rounded-md"
           />
