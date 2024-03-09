@@ -4,14 +4,14 @@ import Navbar from './components/Navbar';
 import Dashboard from './pages/Dashboard'; 
 import Orders from './pages/Orders'; 
 import SidebarItem from './components/SidebarItem';
-import { Home as HomeIcon, ShoppingCart as OrdersIcon } from 'lucide-react';
+import { LayoutDashboard as DashboardIcon, ShoppingCart as OrdersIcon } from 'lucide-react';
 
 function App() {
   return (
     <Router>
       <main className="flex">
       <Sidebar>
-          <SidebarItem icon={<HomeIcon />} text="Dashboard" to="/" />
+          <SidebarItem icon={<DashboardIcon />} text="Dashboard" to="/" />
           <SidebarItem icon={<OrdersIcon />} text="Orders" to="/orders" />
         </Sidebar>
         <div className="flex-1">
