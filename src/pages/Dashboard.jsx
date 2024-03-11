@@ -1,5 +1,7 @@
 import Card from "../components/Card";
 import data from "../constants/data.json";
+import RecentOrdersCard from "../components/RecentOrdersCard";
+
 
 const Dashboard = () => {
   return (
@@ -19,11 +21,9 @@ const Dashboard = () => {
                 />
               ))}
             </div>
+            <div></div>
           </div>
-          <aside className="bg-white p-4 shadow rounded">
-            <h2 className="text-l font-bold">Recent Orders</h2>
-            <p>Content for orders notifications</p>
-          </aside>
+          <RecentOrdersCard />
         </div>
       </div>
     </section>
