@@ -7,7 +7,7 @@ const Dashboard = () => {
   return (
     <section>
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl font-bold pt-2">Dashboard</h1>
+        <h3 className="text-3xl font-bold pt-5 pb-3">Welcome back Kachi!!</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mt-4">
           <div className="md:col-span-3">
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">

@@ -28,7 +28,7 @@ const Sidebar = ({ children }) => {
           </button>
         </div>
         <SidebarContext.Provider value={{ expanded }}>
-          <ul className="flex-1 px-3">{children}</ul>
+          <ul className="flex-1 px-3 pt-5">{children}</ul>
         </SidebarContext.Provider>
         <div className="border-t flex p-3">
           <img
@@ -43,7 +43,7 @@ const Sidebar = ({ children }) => {
           >
             <div className="leading-4">
               <h4 className="font-semibold">John Doe</h4>
-              <span className="text-xs text-gray-600">johndoe@gmail.com</span>
+              <span className="text-xs text-gray-600">kachi@gmail.com</span>
             </div>
             <MoreVertical size={20} />
           </div>
