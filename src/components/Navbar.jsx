@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Bell, Mail, ChevronDown } from "lucide-react";
+import { Bell, Mail, ChevronDown, Search } from "lucide-react";
 
 const Navbar = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -12,12 +12,15 @@ const Navbar = () => {
   return (
     <nav className="bg-white text-black pt-2 px-4 border-b border-[#1B97B2]">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="w-96">
+        <div className="w-96 relative">
           <input
             type="text"
             placeholder="Search..."
-            className="w-full rounded p-2 outline-none"
+            className="w-full rounded pl-2 pr-10 py-2 outline-none"
           />
+          <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+            <Search className="w-5 h-5 text-gray-500" />
+          </div>
         </div>
         <div className="flex items-center space-x-4">
           <div className="p-1.5 ">
