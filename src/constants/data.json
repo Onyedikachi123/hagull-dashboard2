@@ -1,18 +1,17 @@
 [
-    {
-      "title": "Total Earnings",
-      "amount": "$859.25k",
-      "icon": "CircleDollarSign"
-    },
-    {
-      "title": "Orders Completed",
-      "amount": "66,894",
-      "icon": "ShoppingCart"
-    },
-    {
-      "title": "Customers",
-      "amount": "500",
-      "icon": "Users"
-    }
-  ]
-  
+  {
+    "title": "Total Earnings",
+    "amount": "$859.25k",
+    "icon": "CircleDollarSign"
+  },
+  {
+    "title": "Pending Transactions",
+    "amount": "100+",
+    "icon": "CircleDashed"
+  },
+  {
+    "title": "Cancelled Transactions",
+    "amount": "50+",
+    "icon": "Ban"
+  }
+]

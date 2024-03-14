@@ -14,8 +14,17 @@ export default {
           DEFAULT: "#000",
           500: "#1D2235"
         },
+        green: {
+          500: "#4CAF50"
+        },
+        yellow: {
+          500: "#FFC107"
+        },
+        red: {
+          '500': '#ef4444', // This is the default value for red-500 in Tailwind CSS v2.x
+        },
         blue: {
-          500: "#2b77e7"
+          500: "#1B97B2" // Added blue color
         }
       },
       fontFamily: {
@@ -29,4 +38,3 @@ export default {
   },
   plugins: [],
 }
-

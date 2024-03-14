@@ -21,7 +21,12 @@ const Dashboard = () => {
                 />
               ))}
             </div>
-            <div></div>
+            <div className="pt-5">
+            <h2 className="font-bold text-black">Monthly Earnings</h2>
+            </div>
+            <div className="pt-5">
+            <h2 className="font-bold text-black">Orders</h2>
+            </div>
           </div>
           <RecentOrdersCard />
         </div>
