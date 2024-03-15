@@ -24,10 +24,10 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-4">
           <div className="p-1.5 ">
-            <Bell size="20" color="#1B97B2" />
+           <Link to="/notifications"><Bell size="20" color="#1B97B2" /></Link> 
           </div>
           <div className="p-1.5">
-            <Mail size="20" color="#1B97B2" />
+            <Link to="/chat"><Mail size="20" color="#1B97B2" /></Link>
           </div>
           <div className="relative">
             <div
