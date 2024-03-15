@@ -11,7 +11,7 @@ const SidebarItem = ({ icon, text, alert, to }) => {
 
   return (
     <li
-      className={`relative flex items-center py-2 px-3 my-1 font-medium rounded-r-3xl cursor-pointer transition-colors group ${
+      className={`relative flex items-center py-2 px-3 my-5 font-medium rounded-r-3xl cursor-pointer transition-colors group ${
         isActive || 'hover:bg-[#1B97B2] hover:text-[#fff] text-[#000]'
       }`}
     >

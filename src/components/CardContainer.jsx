@@ -1,5 +1,5 @@
-import cardData from './data.json';
-import Card from '../components/Card';
+import cardData from '../constants/data.json';
+import Card from './Card';
 
 function CardContainer() {
   return (

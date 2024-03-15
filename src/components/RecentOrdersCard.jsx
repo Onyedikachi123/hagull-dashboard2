@@ -37,7 +37,7 @@ const ordersData = [
 
 const RecentOrdersCard = () => {
   return (
-    <aside className="bg-white p-3 shadow rounded relative">
+    <aside className="bg-white p-3 shadow rounded relative h-[28rem]">
       <Link to="/orders" className="absolute top-4 right-4 text-[#1B97B2] text-xs underline decoration-[#1B97B2]">
         All Orders
       </Link>

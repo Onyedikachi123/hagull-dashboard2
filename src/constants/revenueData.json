@@ -1,0 +1,51 @@
+[
+    {
+      "label": "January",
+      "revenue": 64854
+     
+    },
+    {
+      "label": "February",
+      "revenue": 54628
+    },
+    {
+      "label": "March",
+      "revenue": 117238
+    },
+    {
+      "label": "April",
+      "revenue": 82830
+    },
+    {
+      "label": "May",
+      "revenue": 91208
+    },
+    {
+      "label": "Jun",
+      "revenue": 103609
+    },
+    {
+      "label": "July",
+      "revenue": 90974
+    },
+    {
+      "label": "August",
+      "revenue": 82919
+    },
+    {
+      "label": "September",
+      "revenue": 62407
+    },
+    {
+      "label": "October",
+      "revenue": 82528
+    },
+    {
+      "label": "November",
+      "revenue": 56979
+    },
+    {
+      "label": "December",
+      "revenue": 87436
+    }
+  ]
