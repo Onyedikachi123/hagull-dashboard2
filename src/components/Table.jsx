@@ -1,5 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
+
 import React, { useState } from 'react';
 
 const Table = ({ data }) => {
@@ -15,7 +16,7 @@ const Table = ({ data }) => {
   };
 
   const filteredData = data.filter((item) => {
-    const searchCondition = item.name.toLowerCase().includes(searchTerm.toLowerCase());
+    const searchCondition = item.username.toLowerCase().includes(searchTerm.toLowerCase());
     const filterCondition = filterDays ? item.days <= filterDays : true;
     return searchCondition && filterCondition;
   });
@@ -25,7 +26,7 @@ const Table = ({ data }) => {
       <div className="mb-4">
         <input
           type="text"
-          placeholder="Search by currency name"
+          placeholder="Search by username"
           className="p-2 border border-gray-300 rounded"
           onChange={handleSearch}
         />
@@ -43,19 +44,21 @@ const Table = ({ data }) => {
         <table className="w-full table-auto">
           <thead>
             <tr className="bg-gray-200 text-gray-600 uppercase text-sm leading-normal">
-              <th className="py-3 px-6 text-left">ID</th>
-              <th className="py-3 px-6 text-left">Name</th>
+              <th className="py-3 px-6 text-left">Order ID</th>
+              <th className="py-3 px-6 text-left">Username</th>
               <th className="py-3 px-6 text-left">Currency</th>
               <th className="py-3 px-6 text-left">Amount</th>
+              <th className="py-3 px-6 text-left">Status</th>
             </tr>
           </thead>
           <tbody className="text-gray-600 text-sm font-light">
             {filteredData.map((item, index) => (
               <tr key={index} className="border-b border-gray-200 hover:bg-gray-100">
-                <td className="py-3 px-6 text-left whitespace-nowrap">{item.id}</td>
-                <td className="py-3 px-6 text-left">{item.name}</td>
+                <td className="py-3 px-6 text-left whitespace-nowrap">{item.orderId}</td>
+                <td className="py-3 px-6 text-left">{item.username}</td>
                 <td className="py-3 px-6 text-left">{item.currency}</td>
                 <td className="py-3 px-6 text-left">{item.amount}</td>
+                <td className="py-3 px-6 text-left">{item.status}</td>
               </tr>
             ))}
           </tbody>
@@ -66,3 +69,5 @@ const Table = ({ data }) => {
 };
 
 export default Table;
+
+

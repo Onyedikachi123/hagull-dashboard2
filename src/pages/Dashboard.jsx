@@ -17,18 +17,19 @@ defaults.plugins.title.font.size = 20;
 defaults.plugins.title.color = "black";
 
 
-const Tabledata = [
-  { id: 1, name: 'John Doe', currency: 'USD', amount: '1000', days: 10, status: 'in Progress' },
-  { id: 2, name: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'Completed' },
-  { id: 3, name: 'Jane Smith', currency: 'BTC', amount: '2000', days: 20, status: 'Approved' },
-  { id: 4, name: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'Pending' },
-  { id: 5, name: 'Jane Smith', currency: 'Naira', amount: '2000', days: 20,status: 'Cancelled' },
-  { id: 6, name: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20,status: 'in Progress' },
-  { id: 7, name: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20,status: 'in Progress' },
-];
-
 
 const Dashboard = () => {
+
+  const Tabledata = [
+    { orderId: 1, username: 'John Doe', currency: 'USD', amount: '1000', days: 10, status: 'In Progress' },
+    { orderId: 2, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'Completed' },
+    { orderId: 3, username: 'Jane Smith', currency: 'BTC', amount: '2000', days: 20, status: 'Approved' },
+    { orderId: 4, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'Pending' },
+    { orderId: 5, username: 'Jane Smith', currency: 'Naira', amount: '2000', days: 20, status: 'Cancelled' },
+    { orderId: 6, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'In Progress' },
+    { orderId: 7, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'In Progress' },
+  ];
+  
   return (
     <section className="bg-gray-100">
       <div className="container mx-auto px-4">
