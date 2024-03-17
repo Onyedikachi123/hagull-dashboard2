@@ -5,7 +5,7 @@ import RecentOrdersCard from "../components/RecentOrdersCard";
 import { Line } from "react-chartjs-2";
 import { Chart as ChartJS, defaults } from "chart.js/auto";
 import revenueData from "../constants/revenueData.json";
-import Table from "../components/Table";
+import Table from "../components/Table/Table";
 
 
 defaults.maintainAspectRatio = false;
@@ -21,15 +21,15 @@ defaults.plugins.title.color = "black";
 const Dashboard = () => {
 
   const Tabledata = [
-    { orderId: 1, username: 'John Doe', currency: 'USD', amount: '1000', days: 10, status: 'In Progress' },
-    { orderId: 2, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'Completed' },
-    { orderId: 3, username: 'Jane Smith', currency: 'BTC', amount: '2000', days: 20, status: 'Approved' },
-    { orderId: 4, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'Pending' },
-    { orderId: 5, username: 'Jane Smith', currency: 'Naira', amount: '2000', days: 20, status: 'Cancelled' },
-    { orderId: 6, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'In Progress' },
-    { orderId: 7, username: 'Jane Smith', currency: 'EUR', amount: '2000', days: 20, status: 'In Progress' },
+    { orderId: 1, username: 'John Doe', currency: 'USD', amount: '1000', date: '2023-03-28', status: 'In Progress' },
+    { orderId: 2, username: 'Jane Smith', currency: 'EUR', amount: '2000',  date: '2023-03-29', status: 'Completed' },
+    { orderId: 3, username: 'Jane Smith', currency: 'BTC', amount: '2000', date: '2023-03-22',  status: 'Approved' },
+    { orderId: 4, username: 'Jane Smith', currency: 'EUR', amount: '2000', date: '2023-03-23',  status: 'Pending' },
+    { orderId: 5, username: 'Jane Smith', currency: 'Naira', amount: '2000', date: '2023-03-25',  status: 'Cancelled' },
+    { orderId: 6, username: 'Jane Smith', currency: 'EUR', amount: '2000', date: '2023-03-26',  status: 'In Progress' },
+    { orderId: 7, username: 'Jane Smith', currency: 'EUR', amount: '2000',  date: '2023-03-21', status: 'In Progress' },
   ];
-  
+
   return (
     <section className="bg-gray-100">
       <div className="container mx-auto px-4">
