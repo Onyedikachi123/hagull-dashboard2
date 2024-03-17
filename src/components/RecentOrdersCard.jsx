@@ -44,7 +44,7 @@ const RecentOrdersCard = () => {
       <h2 className="text-md font-bold">Recent Orders</h2>
       <div className="space-y-4 mt-4">
         {ordersData.map((order, index) => (
-          <div key={index} className="flex items-center space-x-4">
+          <div key={index} className="flex items-center space-x-4 border-b">
             <img src={userImage} alt="User" className="w-7 h-7 rounded-full" />
             <div>
               <p className="text-xs">{order.statement}</p>
