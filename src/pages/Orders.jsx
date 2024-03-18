@@ -28,7 +28,7 @@ const Orders = () => {
   ];
 
   return (
-    <section className="bg-gray-100 h-screen">
+    <section className="bg-gray-100 h-full">
       <div className="container mx-auto px-4">
         <h3 className="text-3xl font-bold pt-5 pb-3">Order List</h3>
         <div className="rounded-md shadow-md p-4 w-[100%] h-[100%] bg-white">
