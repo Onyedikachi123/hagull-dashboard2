@@ -6,7 +6,7 @@ const Table = ({ data }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [filterCurrency, setFilterCurrency] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
-  const rowsPerPage = 20;
+  const rowsPerPage = 10;
 
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
