@@ -88,26 +88,24 @@ const Profile = () => {
               <div className="text-gray-700">
                 <div className="space-y-4">
                   <div className="border border-dashed p-2 mb-4 text-center">
-                  
-                  <button
-        onClick={toggleModal}
-        className="flex items-center justify-center gap-2"
-      >
-        {/* Add Address SVG and text */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="20"
-          className="text-gray-500"
-          viewBox="0 0 30 30"
-          fill="currentColor"
-        >
-          <path d="M12.6035 27H17.3787V17.3787H27V12.6036H17.3787V3H12.6035V12.6036H3V17.3787H12.6035V27Z" />
-        </svg>
-        <span className="mb-0">Add Address</span>
-      </button>
+                    <button
+                      onClick={toggleModal}
+                      className="flex items-center justify-center gap-2"
+                    >
+                      {/* Add Address SVG and text */}
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        className="text-gray-500"
+                        viewBox="0 0 30 30"
+                        fill="currentColor"
+                      >
+                        <path d="M12.6035 27H17.3787V17.3787H27V12.6036H17.3787V3H12.6035V12.6036H3V17.3787H12.6035V27Z" />
+                      </svg>
+                      <span className="mb-0">Add Address</span>
+                    </button>
 
-      <Modal isOpen={isModalOpen} handleClose={toggleModal} />
-                    
+                    <Modal isOpen={isModalOpen} handleClose={toggleModal} />
                   </div>
 
                   <h3 className="text-lg leading-6 font-medium text-gray-900">
