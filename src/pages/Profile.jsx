@@ -1,9 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import {
-  MapPin,
+  
   User,
-  Pencil,
   XCircle,
   ShieldCheck,
   Camera,
@@ -60,27 +59,27 @@ const Profile = () => {
         <h3 className="text-3xl font-bold pt-5 pb-3">Welcome kachi</h3>
         <div className="max-w-full mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
           <div className="px-6 py-4">
-            <div className="flex justify-center my-4">
+            <div className="flex my-4 border-b border-gray-300">
               <button
-                className={`flex items-center px-4 py-5 rounded-lg ${
+                className={`flex px-4 py-5 text-xs font-bold ${
                   activeTab === "tab1"
-                    ? "bg-blue-500 text-white"
-                    : "bg-[#ea8207] text-white"
+                    ? "border-b-2 border-blue-500 text-blue-500 "
+                    : "border-b-2 border-[#ea8207] text-gray-300"
                 }`}
                 onClick={() => setActiveTab("tab1")}
               >
-                <MapPin className="w-5 h-5 mr-2" fill="currentColor" />
+                {/* <LocateFixed className="w-5 h-5 mr-2" fill="currentColor" /> */}
                 <span className="inline-block align-middle">Address</span>
               </button>
               <button
-                className={`flex items-center ml-4 px-4 py-2 rounded-lg ${
+                className={`flex px-4 py-5 text-xs font-bold ml-4 ${
                   activeTab === "tab2"
-                    ? "bg-blue-500 text-white"
-                    : "bg-[#ea8207] text-white"
+                    ? "border-b-2 border-blue-500 text-blue-500"
+                    : "border-b-2 border-[#ea8207] text-gray-300"
                 }`}
                 onClick={() => setActiveTab("tab2")}
               >
-                <User className="w-5 h-5 mr-2" fill="currentColor" />
+                {/* <User className="w-5 h-5 mr-2" fill="currentColor" /> */}
                 <span className="inline-block align-middle">Profile</span>
               </button>
             </div>
@@ -249,7 +248,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="firstName"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                       <div className="mb-5">
@@ -262,7 +261,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="lastName"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                     </div>
@@ -277,7 +276,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="contactNumber"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                       <div className="mb-5">
@@ -290,7 +289,7 @@ const Profile = () => {
                         <input
                           type="email"
                           id="email"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                     </div>
@@ -305,7 +304,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="houseno"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                       <div className="mb-5">
@@ -318,7 +317,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="landMark"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                     </div>
@@ -333,7 +332,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="streetAddress"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                       <div className="mb-5">
@@ -346,7 +345,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="townCity"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                     </div>
@@ -361,7 +360,7 @@ const Profile = () => {
                         <input
                           type="text"
                           placeholder="state/ country"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                       <div className="mb-5">
@@ -374,7 +373,7 @@ const Profile = () => {
                         <input
                           type="text"
                           id="postCode"
-                          className="block w-3/4 px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                          className="block w-full px-4 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
                         />
                       </div>
                     </div>
