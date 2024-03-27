@@ -3,7 +3,7 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Orders from "./pages/Orders";
-import Product from "./pages/Product";
+import Product from "./pages/Product/Product";
 import Profile from "./pages/Profile";
 import Chat from "./pages/Chat";
 import Escrow from "./pages/Escrow";
