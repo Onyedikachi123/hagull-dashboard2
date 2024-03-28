@@ -5,7 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Orders from "./pages/Orders";
 import Product from "./pages/Product/Product";
 import Profile from "./pages/Profile";
-import Chat from "./pages/Chat";
+import Chat from "./pages/Chat/Chat";
 import Escrow from "./pages/Escrow";
 import Payment from "./pages/Payment";
 import Kyc from "./pages/Kyc";
