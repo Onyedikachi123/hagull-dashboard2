@@ -1,20 +1,22 @@
 import { useState } from 'react';
 import ChatWindow from './ChatWindow';
 
-const ChatApp = () => {
+const Chat = () => {
     const [messages, setMessages] = useState([]);
 
     const handleSendMessage = (text) => {
-        setMessages([...messages, { text, sender: 'customer' }]);
+        if (typeof text === 'string' && ['vendor', 'customer'].includes('customer')) {
+            setMessages([...messages, { text, sender: 'customer' }]);
+        }
     };
 
     return (
-        <div className="h-screen flex  bg-gray-100">
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full max-w-md h-3/4">
+        <div className="h-screen flex  bg-gray-100 p-14">
+            <div className="bg-white shadow-lg rounded-lg overflow-hidden w-full ">
                 <ChatWindow messages={messages} onSendMessage={handleSendMessage} />
             </div>
         </div>
     );
 };
 
-export default ChatApp;
+export default Chat;

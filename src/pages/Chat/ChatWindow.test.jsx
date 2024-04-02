@@ -20,9 +20,9 @@ describe('ChatWindow', () => {
         const input = screen.getByPlaceholderText('Type your message...');
         fireEvent.change(input, { target: { value: 'Hello' } });
         expect(input.value).toBe('Hello');
-
+    
         const sendButton = screen.getByRole('button');
         fireEvent.click(sendButton);
-        expect(mockSendMessage).toHaveBeenCalledWith('Hello');
+        expect(mockSendMessage).toHaveBeenCalledWith({ text: 'Hello', sender: 'customer' }); // Match the new message object structure
     });
 });
