@@ -1,20 +1,15 @@
-import { useState } from "react";
-import PropTypes from "prop-types";
-import { Send } from "lucide-react";
+import { useState } from 'react';
+import PropTypes from 'prop-types';
+import { Send } from 'lucide-react';
 
 const ChatWindow = ({ messages, onSendMessage }) => {
-  const [message, setMessage] = useState("");
-  const [activeChat, setActiveChat] = useState(null);
+  const [message, setMessage] = useState('');
 
   const handleSend = () => {
-    if (message.trim() !== "") {
-      onSendMessage({ text: message, sender: "customer" });
-      setMessage("");
+    if (message.trim() !== '') {
+      onSendMessage({ text: message, sender: 'customer' });
+      setMessage('');
     }
-  };
-
-  const handleChatClick = (index) => {
-    setActiveChat(index);
   };
 
   return (
@@ -24,35 +19,26 @@ const ChatWindow = ({ messages, onSendMessage }) => {
         {messages.map((msg, index) => (
           <div
             key={index}
-            className={`p-2 hover:bg-gray-200 cursor-pointer ${
-              activeChat === index ? "bg-gray-200" : ""
-            }`}
-            onClick={() => handleChatClick(index)}
+            className={`p-2 hover:bg-gray-200 cursor-pointer`}
           >
-             {msg.sender === "vendor" ? "Vendor" : "You"}: {String(msg.text)}
+            {msg.sender === 'vendor' ? 'Vendor' : 'You'}: {msg.text}
           </div>
         ))}
       </div>
       <div className="flex-1 flex flex-col">
         <div className="flex-1 overflow-auto p-4">
-          {messages.map((msg, index) => {
-            if (typeof msg.text !== 'string') {
-              console.error('Expected msg.text to be a string', msg);
-            }
-
-            return (
-              <div
-                key={index}
-                className={`p-2 my-2 rounded-lg ${
-                  msg.sender === "vendor"
-                    ? "bg-blue-200 self-end"
-                    : "bg-green-200"
-                }`}
-              >
-                {msg.text}
-              </div>
-            );
-          })}
+          {messages.map((msg, index) => (
+            <div
+              key={index}
+              className={`p-2 my-2 rounded-lg ${
+                msg.sender === 'vendor'
+                  ? 'bg-blue-200 self-end'
+                  : 'bg-green-200'
+              }`}
+            >
+              {msg.text}
+            </div>
+          ))}
         </div>
         <div className="flex items-center p-4">
           <input
@@ -75,13 +61,13 @@ const ChatWindow = ({ messages, onSendMessage }) => {
 };
 
 ChatWindow.propTypes = {
-    messages: PropTypes.arrayOf(
-      PropTypes.shape({
-        text: PropTypes.string.isRequired,
-        sender: PropTypes.oneOf(['vendor', 'customer']).isRequired,
-      })
-    ).isRequired,
-    onSendMessage: PropTypes.func.isRequired,
+  messages: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      sender: PropTypes.oneOf(['vendor', 'customer']).isRequired,
+    })
+  ).isRequired,
+  onSendMessage: PropTypes.func.isRequired,
 };
 
 export default ChatWindow;
