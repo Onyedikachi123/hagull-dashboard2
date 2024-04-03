@@ -1,8 +1,19 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ChatWindow from './ChatWindow';
 
 const Chat = () => {
     const [messages, setMessages] = useState([]);
+
+    useEffect(() => {
+        // Load saved messages from localStorage when the component mounts
+        const savedMessages = JSON.parse(localStorage.getItem('chatMessages') || '[]');
+        setMessages(savedMessages);
+    }, []);
+
+    useEffect(() => {
+        // Save messages to localStorage whenever the messages state changes
+        localStorage.setItem('chatMessages', JSON.stringify(messages));
+    }, [messages]);
 
     const handleSendMessage = (message) => {
         if (typeof message.text === 'string') {
