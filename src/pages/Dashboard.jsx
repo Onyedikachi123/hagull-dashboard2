@@ -69,7 +69,7 @@ const Dashboard = () => {
                     },
                     plugins: {
                       title: {
-                        text: "Monthly Revenue & Cost",
+                        text: "Monthly Revenue",
                       },
                     },
                   }}

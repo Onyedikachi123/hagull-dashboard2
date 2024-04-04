@@ -4,6 +4,8 @@ import { Send } from 'lucide-react';
 
 const ChatWindow = ({ messages, onSendMessage }) => {
   const [message, setMessage] = useState('');
+  const [search, setSearch] = useState('');
+  const [filteredMessages, setFilteredMessages] = useState(messages);
 
   const handleSend = () => {
     if (message.trim() !== '') {
@@ -12,14 +14,32 @@ const ChatWindow = ({ messages, onSendMessage }) => {
     }
   };
 
+  const handleSearch = (e) => {
+    const searchText = e.target.value;
+    setSearch(searchText);
+    const filtered = messages.filter((msg) =>
+      msg.sender === 'customer' ? msg.text.toLowerCase().includes(searchText.toLowerCase()) : false
+    );
+    setFilteredMessages(filtered);
+  };
+
   return (
     <div className="flex h-full">
       <div className="w-1/4 bg-gray-100 border-r border-gray-300">
         <div className="p-4 font-bold">Chats</div>
-        {messages.map((msg, index) => (
+        <div className="px-4 pb-4">
+          <input
+            type="text"
+            value={search}
+            onChange={handleSearch}
+            className="w-full p-1 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Search customers..."
+          />
+        </div>
+        {filteredMessages.map((msg, index) => (
           <div
             key={index}
-            className={`p-2 hover:bg-gray-200 cursor-pointer`}
+            className={`p-2 rounded-lg bg-[#1B97B2] text-white my-2 mx-2 hover:bg-[#1695a3] cursor-pointer`}
           >
             {msg.sender === 'vendor' ? 'Vendor' : 'You'}: {msg.text}
           </div>
@@ -30,9 +50,9 @@ const ChatWindow = ({ messages, onSendMessage }) => {
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-2 my-2 rounded-lg ${
+              className={`p-2 my-2 mx-2 rounded-lg w-3/10 self-end ${
                 msg.sender === 'vendor'
-                  ? 'bg-blue-200 self-end'
+                  ? 'bg-[#1B97B2] text-white'
                   : 'bg-green-200'
               }`}
             >

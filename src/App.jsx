@@ -9,7 +9,7 @@ import Chat from "./pages/Chat/Chat";
 import Escrow from "./pages/Escrow";
 import Payment from "./pages/Payment";
 import Kyc from "./pages/Kyc";
-import Reviews from "./pages/Reviews";
+import Reviews from "./pages/Reviews/Reviews";
 import Analytics from "./pages/Analytics";
 import Notifications from "./pages/Notifications";
 import FAQ from "./pages/FAQ";
