@@ -1,11 +1,10 @@
-
-
 const Footer = () => {
   return (
-    <section className="footer p-0">
+    <footer className="fixed bottom-0 w-full">
+      {/* Footer content */}
       footer
-    </section>
-  )
-}
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
